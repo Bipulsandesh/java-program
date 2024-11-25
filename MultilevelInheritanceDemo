@@ -1,0 +1,39 @@
+package javaoops;
+class Vehicle
+{
+	void move()
+	{
+		System.out.println("All vehicle will move");
+	}
+}
+class Car extends Vehicle
+{
+	void drive()
+	{
+		System.out.println("Driver is driving a car");
+	}
+	
+}
+class ElectricCar extends Car
+{
+	void charge()
+	{
+		System.out.println("Car battery is charging");
+	}
+}
+
+public class MultilevelInheritanceDemo {
+
+	public static void main(String[] args) {
+		ElectricCar ec =new ElectricCar();
+		ec.charge();
+		ec.drive();
+		ec.move();
+		Car c =new Car();
+		c.drive();
+		c.move();
+		//c.charge() // compile time error or syntax error
+		
+	}
+
+}
