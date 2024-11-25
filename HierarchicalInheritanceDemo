@@ -1,0 +1,37 @@
+package javaoops;
+class Dimension  // Parent class
+{
+	void draw(String s)
+	{
+		System.out.println("The "+s +" shape is drawn");
+	}
+	
+}
+
+class Rectangle extends Dimension  // child class
+{
+	void areaOfRectangle(double l, double b)
+	{
+	
+		System.out.println("Area of Rectangle ="+(l*b));
+	}
+}
+class Square extends Dimension
+{
+	void areaOfSquare(double a)
+	{
+		System.out.println("Area of Square ="+ (a*a));
+	}
+}
+public class HierarchicalInheritanceDemo {
+
+	public static void main(String[] args) {
+		Rectangle r=new Rectangle();
+		r.areaOfRectangle(10,5);;
+		r.draw("Rectangle");
+		Square s =new Square();
+		s.areaOfSquare(7);
+		s.draw("Square");
+	}
+
+}
